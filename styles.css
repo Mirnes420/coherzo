@@ -872,7 +872,7 @@ section {
 
 #pricing .pricing-cta {
   background: linear-gradient(135deg, var(--amber), var(--amber-deep));
-  color: #1a1200;
+  color: white;
 }
 
 #pricing .pricing-footnote {

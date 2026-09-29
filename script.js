@@ -1,39 +1,39 @@
 document.addEventListener('DOMContentLoaded', () => {
 
 
-      const toggle = document.querySelector('.menu-toggle');
-    const nav = document.querySelector('nav');
+  const toggle = document.querySelector('.menu-toggle');
+  const nav = document.querySelector('nav');
 
-    toggle.addEventListener('click', () => {
-      nav.classList.toggle('active');
-      toggle.classList.toggle('active');
+  toggle.addEventListener('click', () => {
+    nav.classList.toggle('active');
+    toggle.classList.toggle('active');
+  });
+
+  nav.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      nav.classList.remove('active');
+      toggle.classList.remove('active');
     });
+  });
 
-    nav.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        nav.classList.remove('active');
-        toggle.classList.remove('active');
-      });
-    });
-
-    const pingBackends = () => {
+  const pingBackends = () => {
     const urls = [
-      "https://plumber-emergency.gentlemansolutions.com",
+      "https://app.coherzo.gentlemansolutions.com/",
       "https://plumber-backend-fnh6.onrender.com"
     ];
 
     urls.forEach(url => {
       // Use fetch with 'no-cors' mode so security policies don't block the drop ping
-      fetch(url, { 
-        method: 'GET', 
+      fetch(url, {
+        method: 'GET',
         mode: 'no-cors',
         cache: 'no-cache'
-      }).catch(err => console.log(`Ping to ${url} sent.`)); 
+      }).catch(err => console.log(`Ping to ${url} sent.`));
     });
   };
 
   pingBackends();
-    
+
   // ==========================================================================
   // 1. SCROLL REVEAL ENGINE (Preserves HTML Tags & Layout Structures)
   // ==========================================================================
@@ -126,14 +126,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const isFounders = window.location.hash === '#founders';
     const landingView = document.getElementById('landing-view');
     const foundersSection = document.getElementById('founders-section');
-    
+
     if (isFounders) {
       if (landingView) landingView.classList.add('hidden');
       if (foundersSection) foundersSection.classList.remove('hidden');
-      
+
       // Hide all standard header navigation links
       document.querySelectorAll('.landing-nav-link').forEach(el => el.classList.add('hidden'));
-      
+
       // Add/Show back link in nav if not exists
       let backLink = document.getElementById('nav-back-home');
       if (!backLink) {
@@ -149,20 +149,20 @@ document.addEventListener('DOMContentLoaded', () => {
       } else {
         backLink.classList.remove('hidden');
       }
-      
+
       window.scrollTo(0, 0);
     } else {
       if (landingView) landingView.classList.remove('hidden');
       if (foundersSection) foundersSection.classList.add('hidden');
-      
+
       // Show standard header navigation links
       document.querySelectorAll('.landing-nav-link').forEach(el => el.classList.remove('hidden'));
-      
+
       const backLink = document.getElementById('nav-back-home');
       if (backLink) {
         backLink.classList.add('hidden');
       }
-      
+
       // Handle scrolling to landing sections when routing back
       if (window.location.hash && window.location.hash !== '#') {
         const targetElement = document.querySelector(window.location.hash);
@@ -217,26 +217,26 @@ document.addEventListener('DOMContentLoaded', () => {
   // 5. STATS COUNTER ANIMATION ENGINE
   // ==========================================================================
   const counterElements = document.querySelectorAll('[data-counter]');
-  
+
   const animateCounter = (el) => {
     const target = parseFloat(el.getAttribute('data-counter'));
     const decimals = parseInt(el.getAttribute('data-decimals') || '0', 10);
-    const duration = 1500; 
+    const duration = 1500;
     const startTime = performance.now();
-    
+
     const updateCount = (currentTime) => {
       const elapsed = currentTime - startTime;
       const progress = Math.min(elapsed / duration, 1);
-      
+
       const easeProgress = progress * (2 - progress);
       const currentValue = easeProgress * target;
-      
+
       if (decimals > 0) {
         el.textContent = currentValue.toFixed(decimals);
       } else {
         el.textContent = Math.floor(currentValue);
       }
-      
+
       if (progress < 1) {
         requestAnimationFrame(updateCount);
       } else {
@@ -247,7 +247,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       }
     };
-    
+
     requestAnimationFrame(updateCount);
   };
 
@@ -368,13 +368,13 @@ const initBgCanvas = () => {
     }
     draw() {
       const currentX = this.x + (this.xOffset || 0);
-      
+
       // Outer bubble ring
       ctx.beginPath();
       ctx.arc(currentX, this.y, this.radius, 0, Math.PI * 2);
       ctx.fillStyle = `rgba(14, 165, 233, ${this.opacity})`; // Soft sky/water blue
       ctx.fill();
-      
+
       // Inside highlight spot for liquid feel
       ctx.beginPath();
       ctx.arc(currentX - this.radius * 0.3, this.y - this.radius * 0.3, this.radius * 0.15, 0, Math.PI * 2);
@@ -391,7 +391,7 @@ const initBgCanvas = () => {
     width = canvas.width = window.innerWidth;
     height = canvas.height = window.innerHeight;
   };
-  
+
   // Throttle resize event slightly
   let resizeTimeout;
   window.addEventListener('resize', () => {
