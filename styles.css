@@ -1617,6 +1617,67 @@ footer .logo {
 
 /* ── MOBILE NAV ACTIVE ENGINE ── */
 @media (max-width: 768px) {
+  .hero {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+
+  .hero-inner,
+  .hero-content {
+    max-width: none;
+    width: 100%;
+  }
+
+  .hero-actions {
+    width: 100%;
+  }
+
+  .flow-layout {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    align-items: stretch;
+  }
+
+  .paths-container,
+  .final-step-container,
+  .bracket-wrapper {
+    width: 100%;
+  }
+
+  .bracket-wrapper {
+    display: none;
+  }
+
+  .steps-inline {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.75rem;
+  }
+
+  .creative-connector {
+    width: 100% !important;
+    height: 2px !important;
+    margin: 0.25rem 0 !important;
+    background: repeating-linear-gradient(90deg, #d99a3f 0, #d99a3f 4px, transparent 4px, transparent 8px) !important;
+  }
+
+  .creative-connector::after {
+    right: 50% !important;
+    transform: translateX(50%);
+    top: auto !important;
+    bottom: -6px !important;
+    border-top: 6px solid #d99a3f !important;
+    border-bottom: none !important;
+    border-left: 6px solid transparent !important;
+    border-right: 6px solid transparent !important;
+  }
+
+  .or-divider-inline {
+    width: 100%;
+    padding-left: 0;
+    margin: 0.25rem 0;
+  }
+
   .menu-toggle {
     display: flex;
     flex-direction: column;
@@ -1682,6 +1743,73 @@ footer .logo {
   nav .nav-cta {
     padding: 0.75rem 2rem !important;
     font-size: 1rem !important;
+  }
+  
+  #pricing {
+  width: 100%;
+  max-width: none;        /* override section's 1200px cap */
+  margin-left: 0;
+  margin-right: 0;        /* remove auto-centering */
+  padding-left: 16px;
+  padding-right: 16px;
+  box-sizing: border-box;
+}
+
+  /* Force pricing cards into a single full-width column */
+  .pricing-grid {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 20px;
+  }
+
+  .pricing-card {
+    width: 100%;
+    max-width: 100%; /* Override fixed max-widths if present */
+    box-sizing: border-box;
+  }
+
+  /* Force calculator container and inputs to stretch full width */
+  .min-calc {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    padding: 20px 16px;
+  }
+
+  .min-calc__body {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 20px;
+  }
+
+  .min-calc__inputs {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 16px;
+  }
+
+  .min-calc__field {
+    width: 100%;
+  }
+
+  .min-calc__field input {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .min-calc__result {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 12px;
+  }
+
+  .min-calc__result-box {
+    width: 100%;
+    box-sizing: border-box;
   }
 }
 
