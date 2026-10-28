@@ -1632,50 +1632,92 @@ footer .logo {
     width: 100%;
   }
 
+  .how-it-works-section {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+
   .flow-layout {
     grid-template-columns: 1fr;
-    gap: 1rem;
+    gap: 0.75rem;
     align-items: stretch;
+    max-width: 100%;
   }
 
   .paths-container,
   .final-step-container,
   .bracket-wrapper {
     width: 100%;
+    max-width: 100%;
   }
 
   .bracket-wrapper {
     display: none;
   }
 
+  .flow-row {
+    padding: 0.9rem 0.75rem 0.9rem 0.9rem;
+  }
+
+  .option-header {
+    flex-wrap: wrap;
+    gap: 0.45rem;
+  }
+
   .steps-inline {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 0.75rem;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 24px minmax(0, 1fr);
+    gap: 0.4rem;
+    align-items: center;
+  }
+
+  .creative-step {
+    padding-left: 0.35rem;
+    min-width: 0;
+  }
+
+  .creative-num {
+    font-size: 2.4rem;
+    top: -0.3rem;
+    right: 0.3rem;
+    left: auto;
+    opacity: 0.6;
+  }
+
+  .creative-step h3 {
+    font-size: 0.82rem;
+    line-height: 1.3;
   }
 
   .creative-connector {
-    width: 100% !important;
+    width: 24px !important;
     height: 2px !important;
-    margin: 0.25rem 0 !important;
+    margin: 0 !important;
     background: repeating-linear-gradient(90deg, #d99a3f 0, #d99a3f 4px, transparent 4px, transparent 8px) !important;
   }
 
   .creative-connector::after {
-    right: 50% !important;
-    transform: translateX(50%);
-    top: auto !important;
-    bottom: -6px !important;
-    border-top: 6px solid #d99a3f !important;
-    border-bottom: none !important;
-    border-left: 6px solid transparent !important;
-    border-right: 6px solid transparent !important;
+    right: -2px !important;
+    top: -4px !important;
+    border-top: 5px solid transparent !important;
+    border-bottom: 5px solid transparent !important;
+    border-left: 6px solid #d99a3f !important;
+    border-right: none !important;
   }
 
   .or-divider-inline {
     width: 100%;
     padding-left: 0;
     margin: 0.25rem 0;
+  }
+
+  .or-line {
+    flex: 1;
+    width: auto;
+  }
+
+  .final-step-container {
+    padding: 1rem 0.75rem;
   }
 
   .menu-toggle {
