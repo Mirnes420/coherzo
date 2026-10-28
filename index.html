@@ -21,8 +21,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="icon" type="image/x-icon" href="logo.svg">
   <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700;800;900&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&display=swap"
     rel="stylesheet">
+  href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&display=swap"
+  rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <script src="script.js" defer></script>
 
@@ -36,7 +38,7 @@
     "applicationCategory": "BusinessApplication",
     "offers": {
       "@type": "Offer",
-      "price": "99.99",
+      "price": "59.99",
       "priceCurrency": "USD",
       "priceModel": "Subscription"
     },
@@ -95,20 +97,22 @@
         <div class="hero-inner">
 
           <div class="hero-content">
-            <div class="hero-eyebrow">Automated Dispatch for Plumbers, Electricians and Professionals</div>
-            <h1>Handle emergencies <br> like a pro.</h1>
-            <p>Customers fill a 3-step form. Your team gets a structured incident report on WhatsApp in under 15
-              seconds. No calls, no back and forth, no missed emergencies.</p>
+            <div class="hero-eyebrow">for Plumbers, Electricians and HVAC technicians</div>
+            <h1>Always work on <br>
+              <h1 class="title-red">emergencies first!</h1>
+            </h1>
+            <p>Get a structured incident report on Whatsapp every time and never miss an emergency!</p>
 
             <div class="hero-actions">
               <a href="https://whop.com/gentleman-solutions/plumber-emergency/" class="btn-dark"
                 data-track="clicked_whop_free_trial" id="hero_whop_trial" target="_blank" rel="noopener">Start Free
                 Trial</a>
               <a href="https://app.coherzo.gentlemansolutions.com/demo" class="btn-outline btn-dark"
-                data-track="clicked_see_live_demo" id="hero_live_demo" target="_blank" rel="noopener">See Live Demo</a>
+                data-track="clicked_see_live_demo" id="hero_live_demo" target="_blank" rel="noopener">See Live
+                Demo</a>
             </div>
 
-            <p class="trial-note">7 days free, then $99.99/month. Cancel anytime.</p>
+            <p class="trial-note">7 days free, then $59.99/month. Cancel anytime.</p>
           </div>
 
           <!-- Centered, Ultra-Wide Video Showcase -->
@@ -131,33 +135,162 @@
     </div>
     <hr class="divider">
 
-    <!-- HOW IT WORKS -->
-    <section id="how-it-works">
-      <span class="eyebrow">How It Works</span>
-      <h2 class="section-title">From active leak to dispatched tech in three steps</h2>
-      <div class="creative-flow">
-        <div class="creative-step">
-          <div class="creative-num">01</div>
-          <h3>Customer fills the form</h3>
+    <!-- HOW IT WORKS: CALLS -->
+    <section id="how-it-works" class="how-it-works-section">
+      <span class="eyebrow">Easy To Use!</span>
+
+      <div class="flow-layout">
+
+        <!-- LEFT SIDE: DUAL PATHS (01 & 02) -->
+        <div class="paths-container">
+
+          <!-- OPTION A (CALL) -->
+          <div class="flow-row row-a" id="row-a">
+            <div class="option-header">
+              <span class="option-tag call-tag">Option A</span>
+              <span class="option-label">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path
+                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                  </path>
+                </svg>
+                Via Phone Call
+              </span>
+            </div>
+
+            <div class="steps-inline">
+              <div class="creative-step">
+                <div class="creative-num">01</div>
+                <h3>Customer calls the AI agent</h3>
+              </div>
+
+              <div class="creative-connector"></div>
+
+
+              <div class="creative-step">
+                <div class="creative-num">02</div>
+                <h3>Our agent gathers all the data</h3>
+              </div>
+            </div>
+          </div>
+
+          <!-- CENTER OR DIVIDER LINE -->
+          <div class="or-divider-inline">
+            <div class="or-line"></div>
+            <span class="or-text">OR</span>
+            <div class="or-line"></div>
+          </div>
+
+          <!-- OPTION B (FORM) -->
+          <div class="flow-row row-b" id="row-b">
+            <div class="option-header">
+              <span class="option-tag form-tag">Option B</span>
+              <span class="option-label">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                  <polyline points="14 2 14 8 20 8"></polyline>
+                  <line x1="16" y1="13" x2="8" y2="13"></line>
+                  <line x1="16" y1="17" x2="8" y2="17"></line>
+                  <polyline points="10 9 9 9 8 9"></polyline>
+                </svg>
+                Via Web Form
+              </span>
+            </div>
+
+            <div class="steps-inline">
+              <div class="creative-step">
+                <div class="creative-num">01</div>
+                <h3>Customer fills the form</h3>
+              </div>
+
+              <div class="creative-connector"></div>
+
+
+
+              <div class="creative-step">
+                <div class="creative-num">02</div>
+                <h3>AI reads and structures it</h3>
+              </div>
+            </div>
+          </div>
+
         </div>
-        <div class="creative-connector"></div>
-        <div class="creative-step">
-          <div class="creative-num">02</div>
-          <h3>AI reads and structures it</h3>
+
+        <!-- CURLY BRACKET CONNECTOR (SVG) -->
+        <div class="bracket-wrapper">
+          <svg class="curly-bracket-svg" viewBox="0 0 60 200" fill="none" preserveAspectRatio="none">
+            <!-- Path A Wire (Top half) -->
+            <path d="M 0 45 C 30 45, 30 100, 60 100" stroke="rgba(0,0,0,0.15)" stroke-width="2.5" id="bracket-path-a" />
+            <!-- Path B Wire (Bottom half) -->
+            <path d="M 0 155 C 30 155, 30 100, 60 100" stroke="rgba(0,0,0,0.15)" stroke-width="2.5"
+              id="bracket-path-b" />
+          </svg>
         </div>
-        <div class="creative-connector"></div>
-        <div class="creative-step">
-          <div class="creative-num">03</div>
-          <h3>Report hits your WhatsApp</h3>
+
+        <!-- RIGHT SIDE: UNIFIED STEP 03 -->
+        <div class="final-step-container">
+          <div class="creative-step final-step" id="final-step">
+            <div class="creative-num">03</div>
+            <h3>We send the report to your WhatsApp</h3>
+          </div>
         </div>
+
       </div>
     </section>
+
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const rowA = document.getElementById("row-a");
+        const rowB = document.getElementById("row-b");
+        const bracketA = document.getElementById("bracket-path-a");
+        const bracketB = document.getElementById("bracket-path-b");
+        const finalStep = document.getElementById("final-step");
+
+        let activePath = "A";
+
+        function runAnimationCycle() {
+          // Reset all states
+          rowA.classList.remove("active-charge");
+          rowB.classList.remove("active-charge");
+          finalStep.classList.remove("active-charge-a", "active-charge-b");
+
+          bracketA.setAttribute("stroke", "rgba(0,0,0,0.15)");
+          bracketA.setAttribute("stroke-width", "2.5");
+          bracketB.setAttribute("stroke", "rgba(0,0,0,0.15)");
+          bracketB.setAttribute("stroke-width", "2.5");
+
+          if (activePath === "A") {
+            // Highlight Call path (Red accent)
+            rowA.classList.add("active-charge");
+            bracketA.setAttribute("stroke", "#dc2626");
+            bracketA.setAttribute("stroke-width", "3.5");
+            finalStep.classList.add("active-charge-a");
+
+            activePath = "B";
+          }
+
+          else {
+            // Highlight Form path (Amber accent)
+            rowB.classList.add("active-charge");
+            bracketB.setAttribute("stroke", "#d99a3f");
+            bracketB.setAttribute("stroke-width", "3.5");
+            finalStep.classList.add("active-charge-b");
+
+            activePath = "A";
+          }
+        }
+
+        runAnimationCycle();
+        setInterval(runAnimationCycle, 3500);
+      });
+    </script>
+
 
     <hr class="divider">
 
     <!-- FEATURES -->
     <section id="features">
-      <span class="eyebrow">Platform</span>
       <h2 class="section-title">Built around how professionals actually work</h2>
       <div class="features">
         <div class="feature">
@@ -193,9 +326,9 @@
               <line x1="12" y1="18" x2="12.01" y2="18"></line>
             </svg>
           </div>
-          <h3>No app downloads</h3>
-          <p>Works on any phone through WhatsApp. No software to install, no account to create for your customers or
-            your team.</p>
+          <h3>24/7 AI Voice Coverage</h3>
+          <p>Never miss an after-hours opportunity. Customers simply call your AI agent, with zero setup or software
+            required.</p>
         </div>
         <div class="feature">
           <div class="feature-icon">
@@ -235,7 +368,8 @@
       </div>
     </section>
 
-    <hr class="divider">
+    <hr class="divider mx-5">
+
 
     <!-- WHY COHERZO -->
     <section id="why-coherzo">
@@ -357,34 +491,108 @@
     <!-- PRICING -->
     <section id="pricing">
       <span class="eyebrow">Pricing</span>
-      <h2 class="section-title">One plan. No surprises.</h2>
-      <div class="pricing-center">
-        <div class="pricing-card">
-          <div class="pricing-plan">Operator Plan</div>
-          <div class="pricing-name">Everything included</div>
-          <div class="pricing-sub">All the tools to automate intake and route jobs directly to your team's WhatsApp.
-          </div>
-          <div class="pricing-price-block">
-            <div class="trial-badge">7 Days Free Trial</div>
-            <div class="price-main">$99.99 <span>/ month</span></div>
-          </div>
+      <h2 class="section-title">Plans built around your call volume.</h2>
+
+      <!-- Plans Grid -->
+      <div class="pricing-grid">
+
+        <!-- STARTER -->
+        <div class="pricing-card" id="plan-starter">
+          <div class="pricing-plan">Starter</div>
+          <div class="price-main">$49 <span>/ month</span></div>
+          <div class="pricing-minutes-included"><span>100 min</span> included</div>
+          <div class="pricing-sub">Perfect for solo operators handling a steady flow of inbound calls.</div>
           <ul class="pricing-list">
-            <li><span class="check">&#10003;</span> Instant WhatsApp alert routing</li>
-            <li><span class="check">&#10003;</span> Mobile customer intake form</li>
-            <li><span class="check">&#10003;</span> Google and Apple Maps auto-linking</li>
-            <li><span class="check">&#10003;</span> AI tools and parts recommendation</li>
-            <li><span class="check">&#10003;</span> Photo analysis on submission</li>
-            <li><span class="check">&#10003;</span> Unlimited triage runs</li>
-            <li><span class="check">&#10003;</span> No app required for customers or techs</li>
+            <li><span class="check">&#10003;</span> Whatsapp delivery</li>
+            <li><span class="check">&#10003;</span> Photo analysis</li>
+            <li><span class="check">&#10003;</span> Tools &amp; parts prediction</li>
+            <li><span class="check">&#10003;</span> Web form intake</li>
+            <li><span class="check">&#10003;</span> $0.15 / extra min</li>
           </ul>
-          <a href="https://whop.com/gentleman-solutions/plumber-emergency/" class="pricing-cta"
-            data-track="clicked_whop_pricing_trial" id="pricing_whop_trial" target="_blank" rel="noopener">Start 7-Day
-            Free Trial</a>
-          <p class="pricing-anchor">Often less than the cost of one missed emergency call.</p>
-          <p class="pricing-footnote">Secure checkout via Whop. Cancel anytime in one click.</p>
+          <a href="https://whop.com/checkout/plan_FFrLyMgUsbIr5" class="pricing-cta"
+            data-track="clicked_starter_plan" id="pricing_starter" target="_blank" rel="noopener">Get Started</a>
+          <p class="pricing-footnote">Secure checkout via Whop. Cancel anytime.</p>
         </div>
-      </div>
+
+        <!-- PRO — highlighted -->
+        <div class="pricing-card pricing-card--pro" id="plan-pro">
+          <div class="pricing-badge">Most Popular</div>
+          <div class="pricing-plan">Pro</div>
+          <div class="price-main">$79 <span>/ month</span></div>
+          <div class="pricing-minutes-included"><span>300 min</span> included</div>
+          <div class="pricing-sub">For growing teams that need WhatsApp dispatch and higher volumes.</div>
+          <ul class="pricing-list">
+            <li><span class="check">&#10003;</span> WhatsApp + SMS delivery</li>
+            <li><span class="check">&#10003;</span> Photo analysis</li>
+            <li><span class="check">&#10003;</span> Tools &amp; parts prediction</li>
+            <li><span class="check">&#10003;</span> Web form intake</li>
+            <li><span class="check">&#10003;</span> $0.12 / extra min</li>
+          </ul>
+          <a href="https://whop.com/checkout/plan_svh7YitTuUQNQ" class="pricing-cta pricing-cta--pro"
+            data-track="clicked_pro_plan" id="pricing_pro" target="_blank" rel="noopener">Start Free Trial</a>
+          <p class="pricing-footnote">7 days free. No card surprises.</p>
+        </div>
+
+        <!-- BUSINESS -->
+        <div class="pricing-card" id="plan-business">
+          <div class="pricing-plan">Business</div>
+          <div class="price-main">$129 <span>/ month</span></div>
+          <div class="pricing-minutes-included"><span>1,000 min</span> included</div>
+          <div class="pricing-sub">High-volume operations that run multiple teams on dispatch.</div>
+          <ul class="pricing-list">
+            <li><span class="check">&#10003;</span> WhatsApp + SMS delivery</li>
+            <li><span class="check">&#10003;</span> Photo analysis</li>
+            <li><span class="check">&#10003;</span> Tools &amp; parts prediction</li>
+            <li><span class="check">&#10003;</span> Web form intake</li>
+            <li><span class="check">&#10003;</span> $0.10 / extra min</li>
+          </ul>
+          <a href="https://whop.com/checkout/plan_2diajO1Wl3tTm" class="pricing-cta"
+            data-track="clicked_business_plan" id="pricing_business" target="_blank" rel="noopener">Get Started</a>
+          <p class="pricing-footnote">Secure checkout via Whop. Cancel anytime.</p>
+        </div>
+
+      </div><!-- /pricing-grid -->
+
+      <!-- Minutes Calculator -->
+      <div class="min-calc" id="min-calculator">
+        <div class="min-calc__header">
+          <h3>Minutes Calculator</h3>
+          <p>Estimate how many minutes you use per month and see which plan fits best.</p>
+        </div>
+        <div class="min-calc__body">
+          <div class="min-calc__inputs">
+            <div class="min-calc__field">
+              <label for="calc-calls">Calls per day</label>
+              <input type="number" id="calc-calls" min="1" max="500" value="10" />
+            </div>
+            <div class="min-calc__field">
+              <label for="calc-duration">Avg. call length (min)</label>
+              <input type="number" id="calc-duration" min="1" max="60" value="4" />
+            </div>
+            <div class="min-calc__field">
+              <label for="calc-days">Working days / month</label>
+              <input type="number" id="calc-days" min="1" max="31" value="22" />
+            </div>
+          </div>
+          <div class="min-calc__result">
+            <div class="min-calc__result-box">
+              <span class="min-calc__label">Total minutes / mo</span>
+              <span class="min-calc__value" id="calc-total-min">880</span>
+            </div>
+            <div class="min-calc__result-box min-calc__result-box--rec">
+              <span class="min-calc__label">Recommended plan</span>
+              <span class="min-calc__value" id="calc-rec-plan">Business</span>
+            </div>
+            <div class="min-calc__result-box">
+              <span class="min-calc__label">Est. monthly cost</span>
+              <span class="min-calc__value" id="calc-est-cost">$129</span>
+            </div>
+          </div>
+        </div>
+      </div><!-- /min-calc -->
+
     </section>
+
 
     <hr class="divider">
 
@@ -1000,6 +1208,46 @@
   </script>
 
   <script src="i18n.js"></script>
+  <script>
+    // ── Minutes Calculator ──────────────────────────────────────────────────
+    const PLANS = [
+      { name: 'Starter', price: 49, minutes: 100, overage: 0.15 },
+      { name: 'Pro', price: 79, minutes: 300, overage: 0.12 },
+      { name: 'Business', price: 129, minutes: 1000, overage: 0.10 },
+    ];
+
+    function calcUpdate() {
+      const calls = Math.max(1, parseInt(document.getElementById('calc-calls').value) || 10);
+      const duration = Math.max(1, parseInt(document.getElementById('calc-duration').value) || 4);
+      const days = Math.max(1, parseInt(document.getElementById('calc-days').value) || 22);
+
+      const totalMin = calls * duration * days;
+      document.getElementById('calc-total-min').textContent = totalMin.toLocaleString();
+
+      // Find best plan: cheapest that covers usage, or Business + overage
+      let rec = PLANS[PLANS.length - 1];
+      let estCost = rec.price + Math.max(0, totalMin - rec.minutes) * rec.overage;
+
+      for (const plan of PLANS) {
+        const cost = plan.price + Math.max(0, totalMin - plan.minutes) * plan.overage;
+        if (cost < estCost) { rec = plan; estCost = cost; }
+        if (totalMin <= plan.minutes) { rec = plan; estCost = plan.price; break; }
+      }
+
+      document.getElementById('calc-rec-plan').textContent = rec.name;
+      document.getElementById('calc-est-cost').textContent = '$' + Math.round(estCost);
+
+      // Highlight recommended plan card
+      document.querySelectorAll('.pricing-card').forEach(card => card.classList.remove('pricing-card--calc-rec'));
+      const recCard = document.getElementById('plan-' + rec.name.toLowerCase());
+      if (recCard) recCard.classList.add('pricing-card--calc-rec');
+    }
+
+    ['calc-calls', 'calc-duration', 'calc-days'].forEach(id => {
+      document.getElementById(id).addEventListener('input', calcUpdate);
+    });
+    calcUpdate();
+  </script>
 </body>
 
 </html>
